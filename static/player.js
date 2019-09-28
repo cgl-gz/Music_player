@@ -1,5 +1,3 @@
-// require 是 electron 自带的函数
-// fs 是一个操作文件的库
 const fs = require('fs')
 const path = require('path')
 
@@ -7,7 +5,6 @@ const log = console.log.bind(console)
 
 const appendHtml = (element, html) => element.insertAdjacentHTML('beforeend', html)
 
-// 把 fs.readdir 封装成 promise 的形式, 方便使用
 const readdir = (path) => {
     let p = new Promise((resolve, reject) => {
         fs.readdir(path, (error, files) => {
