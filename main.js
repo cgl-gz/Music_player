@@ -1,5 +1,3 @@
-// 这整个文件都是套路
-// 完全不要关心
 
 const { app, BrowserWindow } = require('electron')
 
