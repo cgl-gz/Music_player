@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gua Player</title>
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+    <!--播放器组件-->
+    <div class="player hide">
+      <audio id='id-audio-player' data-mode="repeat" data-src=""></audio>
+    </div>
+
+    <div class="main">
+      <div class="play-container scale">
+
+        <div id="music-cover">
+          <img id="cover" src="images/唱片.jpg" alt="初始封面">
+        </div>
+
+        <div class="play-controls">
+          <div class="progress">
+            <div class="current-progress"></div>
+          </div>
+
+          <div class="time">
+            <span class="span-time" id="id-span-current">0:00</span>
+            <span class="span-time" id="id-span-duration"></span>
+          </div>
+
+          <div class="controls">
+            <span class="button-control change-colo button-up material-icons" data-action="playPrevious">skip_previous</span>
+            <span class="button-control change-colo button-play material-icons" data-action="playOrPause">pause</span>
+            <span class="button-control change-colo button-down material-icons" data-action="playNext">skip_next</span>
+          </div>
+
+          <div class="music-name text-centered">歌曲名</div>
+          <div class="singer text-centered">歌手</div>
+          <span class="volume hide"></span>
+          <div class="bottom-bar">
+            <span class="material-icons change-colo like-music" data-bar="musicTab" data-like="no">favorite_border</span>
+            <span class="material-icons change-colo play-mode" data-bar="playMode" data-mode="repeat">repeat</span>
+            <span class="material-icons change-colo play-volume" data-bar="playVolume">volume_up</span>
+            <span class="material-icons change-colo play-list" data-bar="playMenu" >queue_music</span>
+          </div>
+
+          <div ></div>
+        </div>
+      </div>
+
+      <div class="songList scale hide">
+        <div class="header">
+          <span class="backPlayer material-icons">&#xe314</span>
+          <span class="annotation">播放列表</span>
+        </div>
+        <ul class="" id='id-ul-song-list'></ul>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    window.nodeRequire = require
+    delete window.exports
+    delete window.module
+  </script>
+  <script src="static/lib/jquery.js"></script>
+  <script>
+    console.log('jquery 版本', $.fn.jquery)
+  </script>
+  <script src="static/player.js"></script>
+</html>
